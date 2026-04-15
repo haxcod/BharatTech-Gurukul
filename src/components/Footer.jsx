@@ -2,15 +2,19 @@ import { motion } from 'framer-motion'
 import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
 import { MdSecurity, MdEmail } from 'react-icons/md'
 
-const services = [
-  'CCTV Installation',
-  'Security Systems',
-  'Website Development',
-  'Android App Dev',
-  'Property Dealing',
-  'Rent Agreement',
-  'Affidavit Services',
-  'Legal Certificates',
+const serviceGroups = [
+  {
+    title: 'CCTV or Security Devices',
+    items: ['CCTV or Security Devices installation', "CCTV or Security Devices AMC's"]
+  },
+  {
+    title: 'Website or Apps developer',
+    items: ['Website or Apps development', 'Website or Apps timely update and maintenance']
+  },
+  {
+    title: 'Legal services',
+    items: ['Legal Documents', 'Criminal and Civil matters', 'Cyber fraud and Bank Account freeze']
+  }
 ]
 
 const quickLinks = [
@@ -55,7 +59,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/45 text-sm leading-relaxed mb-5">
-              Your trusted multi-service partner in Lucknow. Digital solutions, security, property, and legal services — all under one roof.
+              Your trusted multi-service partner in Lucknow. Real estate services via Mahabali Housing Private Limited. Digital solutions, security, and legal services — all under one roof.
             </p>
             {/* Social links */}
             <div className="flex gap-3">
@@ -93,19 +97,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Services</h3>
-            <ul className="space-y-2">
-              {services.map((s, i) => (
-                <li key={i}>
-                  <span className="text-white/50 text-sm flex items-center gap-2 group">
-                    <span className="w-1 h-1 rounded-full bg-blue-500/50" />
-                    {s}
-                  </span>
-                </li>
+            <div className="space-y-4">
+              {serviceGroups.map((group, i) => (
+                <div key={i}>
+                  <h4 className="text-orange-400 text-xs font-bold uppercase tracking-tight mb-2">
+                    {group.title}
+                  </h4>
+                  <ul className="space-y-1.5 ml-1">
+                    {group.items.map((item, j) => (
+                      <li key={j} className="text-white/50 text-[13px] leading-relaxed flex items-start gap-2">
+                        <span className="w-1 h-1 rounded-full bg-blue-500/40 mt-1.5" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact */}

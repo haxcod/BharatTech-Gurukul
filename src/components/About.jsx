@@ -119,8 +119,8 @@ export default function About() {
             </div>
             <p className="text-orange-400 font-semibold text-sm mb-2">Founder & Director — BharatTech Gurukul</p>
             <p className="text-white/55 text-sm leading-relaxed">
-              Qualified engineer with expertise in security systems, digital solutions, real estate consulting,
-              and legal services. Committed to providing trustworthy, affordable, and professional services to every client.
+              Qualified engineer with expertise in security systems, digital solutions, and real estate (via Mahabali Housing Private Limited). 
+              Committed to providing trustworthy, affordable, and professional services to every client.
             </p>
           </div>
           <a href="tel:9140254090" className="btn-primary flex-shrink-0">

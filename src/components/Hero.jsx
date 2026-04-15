@@ -22,9 +22,9 @@ export default function Hero() {
 
       {/* Mesh gradient orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px]" />
-        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-orange-500/20 blur-[120px]" />
-        <div className="absolute top-[40%] left-[30%] w-[400px] h-[400px] rounded-full bg-indigo-700/15 blur-[100px]" />
+        <div className="absolute top-[-20%] left-[-10%] w-[300px] h-[300px] sm:w-[600px] sm:h-[600px] rounded-full bg-blue-600/20 blur-[80px] sm:blur-[120px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[250px] h-[250px] sm:w-[500px] sm:h-[500px] rounded-full bg-orange-500/20 blur-[80px] sm:blur-[120px]" />
+        <div className="absolute top-[40%] left-[30%] w-[200px] h-[200px] sm:w-[400px] sm:h-[400px] rounded-full bg-indigo-700/15 blur-[60px] sm:blur-[100px]" />
       </div>
 
       {/* Grid texture overlay */}
@@ -36,11 +36,11 @@ export default function Hero() {
         }}
       />
 
-      {/* Floating icons */}
+      {/* Floating icons - hidden on mobile for cleaner UX */}
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
-          className={`absolute hidden md:flex w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} items-center justify-center text-white shadow-2xl`}
+          className="absolute hidden md:flex w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} items-center justify-center text-white shadow-2xl"
           style={item.style}
           initial={{ opacity: 0, scale: 0 }}
           animate={{
@@ -63,17 +63,17 @@ export default function Hero() {
       ))}
 
       {/* Hero content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24 pb-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 sm:pt-24 pb-12 sm:pb-16">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center gap-2 glass rounded-full px-5 py-2 mb-8 text-sm font-medium text-orange-300"
+          className="inline-flex items-center gap-2 glass rounded-full px-3 sm:px-5 py-1.5 sm:py-2 mb-6 sm:mb-8 text-xs sm:text-sm font-medium text-orange-300"
         >
           <MdLocationOn className="text-orange-400" />
-          Based in Lucknow, India · Est. 2020
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+          <span className="truncate">Based in Lucknow, India · Est. 2020</span>
+          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse flex-shrink-0" />
         </motion.div>
 
         {/* Heading */}
@@ -81,7 +81,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="section-title text-white mb-6"
+          className="section-title text-white mb-4 sm:mb-6 px-2"
         >
           Your Technology &{' '}
           <span className="gradient-text">Service Partner</span>
@@ -91,7 +91,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.7 }}
-          className="text-lg sm:text-xl text-white/65 max-w-2xl mx-auto mb-4 leading-relaxed"
+          className="text-base sm:text-lg lg:text-xl text-white/65 max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed px-2"
         >
           All-in-one solution for <span className="text-orange-400 font-semibold">Digital</span>,{' '}
           <span className="text-blue-400 font-semibold">Security</span>,{' '}
@@ -103,7 +103,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="text-white/45 mb-10 text-sm tracking-wide"
+          className="text-white/45 mb-8 sm:mb-10 text-xs sm:text-sm tracking-wide px-2"
         >
           Led by <span className="text-white/80 font-semibold">Er. Vinay Kumar</span> · Trusted by hundreds of clients across UP
         </motion.p>
@@ -113,14 +113,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4"
         >
-          <a href="tel:9140254090" className="btn-primary text-base pulse-glow">
+          <a href="tel:9140254090" className="btn-primary text-sm sm:text-base w-full sm:w-auto justify-center pulse-glow">
             <FaPhone /> Contact Now
           </a>
           <button
             onClick={() => scrollToSection('#services')}
-            className="btn-outline text-base"
+            className="btn-outline text-sm sm:text-base w-full sm:w-auto justify-center"
           >
             View Services <span className="ml-1">→</span>
           </button>
@@ -131,7 +131,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.7 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto px-1"
         >
           {[
             { number: '500+', label: 'Happy Clients' },
@@ -139,9 +139,9 @@ export default function Hero() {
             { number: '5+', label: 'Years Experience' },
             { number: '24/7', label: 'Support Available' },
           ].map((stat, i) => (
-            <div key={i} className="glass rounded-2xl p-4 text-center">
-              <div className="text-2xl font-bold gradient-text">{stat.number}</div>
-              <div className="text-white/55 text-xs mt-1">{stat.label}</div>
+            <div key={i} className="glass rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center">
+              <div className="text-xl sm:text-2xl font-bold gradient-text">{stat.number}</div>
+              <div className="text-white/55 text-[10px] sm:text-xs mt-1">{stat.label}</div>
             </div>
           ))}
         </motion.div>
@@ -149,13 +149,13 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 sm:gap-2 cursor-pointer"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         onClick={() => scrollToSection('#about')}
       >
-        <span className="text-white/30 text-xs tracking-widest uppercase">Scroll</span>
-        <FaChevronDown className="text-orange-400 text-sm" />
+        <span className="text-white/30 text-[10px] sm:text-xs tracking-widest uppercase">Scroll</span>
+        <FaChevronDown className="text-orange-400 text-xs sm:text-sm" />
       </motion.div>
     </section>
   )

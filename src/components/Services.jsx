@@ -44,7 +44,7 @@ const services = [
       { icon: <FaHandshake />, text: 'Investment Guidance' },
       { icon: <FaFileAlt />, text: 'Property Documentation' },
     ],
-    desc: 'Expert real estate services across Lucknow and surrounding areas. Buy, sell or invest in property with trusted professional guidance.',
+    desc: 'Expert real estate services provided through Mahabali Housing Private Limited. Buy, sell or invest in property across Lucknow with trusted professional guidance.',
   },
   {
     icon: <FaBalanceScale size={34} />,
