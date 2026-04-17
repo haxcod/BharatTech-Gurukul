@@ -7,6 +7,7 @@ import WhyUs from './components/WhyUs'
 import Testimonials from './components/Testimonials'
 import Process from './components/Process'
 import FAQ from './components/FAQ'
+import Team from './components/Team'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import FloatingButtons from './components/FloatingButtons'
@@ -20,6 +21,7 @@ export default function App() {
       <Services />
       <Gallery />
       <WhyUs />
+      <Team />
       <Testimonials />
       <Process />
       <FAQ />

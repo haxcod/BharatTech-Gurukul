@@ -14,6 +14,10 @@ const serviceGroups = [
   {
     title: 'Legal services',
     items: ['Legal Documents', 'Criminal and Civil matters', 'Cyber fraud and Bank Account freeze']
+  },
+  {
+    title: 'Digital Education',
+    items: ['Basic computer & CCC', 'Web & App designing', 'Tally & Digital Marketing', 'ADCA & O’LEVEL']
   }
 ]
 
@@ -22,6 +26,7 @@ const quickLinks = [
   { label: 'About Us', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'Our Team', href: '#team' },
   { label: 'Why Choose Us', href: '#why-us' },
   { label: 'Contact', href: '#contact' },
 ]

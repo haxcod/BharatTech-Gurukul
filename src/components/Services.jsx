@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { MdSecurity, MdVerified } from 'react-icons/md'
-import { FaCode, FaHome, FaBalanceScale, FaCamera, FaMobile, FaLaptopCode, FaBuilding, FaHandshake, FaFileAlt, FaGavel, FaIdCard, FaCog } from 'react-icons/fa'
+import { FaCode, FaHome, FaBalanceScale, FaCamera, FaMobile, FaLaptopCode, FaBuilding, FaHandshake, FaFileAlt, FaGavel, FaIdCard, FaCog, FaGraduationCap } from 'react-icons/fa'
 
 const services = [
   {
@@ -59,6 +59,20 @@ const services = [
       { icon: <FaBalanceScale />, text: 'Legal Case Assistance' },
     ],
     desc: 'Hassle-free legal documentation and certificate services. From rent agreements to affidavits — we handle all your paperwork.',
+  },
+  {
+    icon: <FaGraduationCap size={34} />,
+    title: 'Digital Education',
+    tagline: 'Professional Learning & Skills',
+    color: 'from-pink-500 to-rose-600',
+    glowColor: 'rgba(236,72,153,0.3)',
+    features: [
+      { icon: <FaLaptopCode />, text: 'Basic Computer & ADCA' },
+      { icon: <FaGraduationCap />, text: "CCC & O'LEVEL" },
+      { icon: <FaCode />, text: 'Web & App Designing' },
+      { icon: <MdVerified />, text: 'Digital Marketing & Tally' },
+    ],
+    desc: 'Empowering you with modern digital skills. From basic computer courses to professional web designing, accounting and digital marketing.',
   },
 ]
 
@@ -143,7 +157,7 @@ export default function Services() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {services.map((s, i) => (
             <ServiceCard key={i} service={s} index={i} />
           ))}

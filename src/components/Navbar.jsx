@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Gallery', href: '#gallery' },
+  { label: 'Team', href: '#team' },
   { label: 'Reviews', href: '#testimonials' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
@@ -23,10 +24,15 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleNavClick = (href) => {
+  const handleNavClick = (e, href) => {
+    if (e) e.preventDefault()
     setMenuOpen(false)
-    const el = document.querySelector(href)
-    if (el) el.scrollIntoView({ behavior: 'smooth' })
+    setTimeout(() => {
+      const el = document.querySelector(href)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 10)
   }
 
   return (
@@ -42,7 +48,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => handleNavClick('#home')}>
+        <div className="flex items-center gap-3 cursor-pointer" onClick={(e) => handleNavClick(e, '#home')}>
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
             <MdSecurity className="text-white text-xl" />
           </div>
@@ -58,7 +64,7 @@ export default function Navbar() {
             <a
               key={link.href}
               className="nav-link"
-              onClick={(e) => { e.preventDefault(); handleNavClick(link.href) }}
+              onClick={(e) => handleNavClick(e, link.href)}
               href={link.href}
             >
               {link.label}
@@ -98,7 +104,7 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   className="py-3 px-4 rounded-xl text-white/80 hover:text-white hover:bg-white/5 font-medium transition cursor-pointer block"
-                  onClick={(e) => { e.preventDefault(); handleNavClick(link.href) }}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   href={link.href}
                 >
                   {link.label}
