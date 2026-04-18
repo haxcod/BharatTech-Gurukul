@@ -49,7 +49,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3 cursor-pointer group" onClick={(e) => handleNavClick(e, '#home')}>
-          <div className="relative w-12 h-12 flex items-center justify-center">
+          <div className="relative w-8 h-8 flex items-center justify-center">
             <img src={logo} alt="BharatTech Gurukul" className="relative h-full w-full object-cover transition-transform duration-500 scale-150" />
           </div>
           <div className="hidden xsm:block">

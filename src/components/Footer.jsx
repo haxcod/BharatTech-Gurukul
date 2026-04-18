@@ -56,7 +56,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20 shadow-2xl transition-all hover:scale-110 hover:bg-white/20">
+              <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center border border-white/20 shadow-2xl transition-all hover:scale-110 hover:bg-white/20">
                 <img src={logo} alt="BharatTech Gurukul" className="w-full h-full object-contain scale-150" />
               </div>
               <div>
