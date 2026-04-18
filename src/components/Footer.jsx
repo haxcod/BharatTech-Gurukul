@@ -6,19 +6,19 @@ import logo from '../assets/logo.png'
 const serviceGroups = [
   {
     title: 'CCTV or Security Devices',
-    items: ['CCTV or Security Devices installation', "CCTV or Security Devices AMC's"]
+    items: ["CCTV or Security Devices installation with AMC's"]
   },
   {
-    title: 'Website or Apps developer',
-    items: ['Website or Apps development', 'Website or Apps timely update and maintenance']
+    title: 'Website or Apps developer ',
+    items: ['Website or Apps development with update & maintenance']
   },
   {
     title: 'Legal services',
-    items: ['Legal Documents', 'Criminal and Civil matters', 'Cyber fraud and Bank Account freeze']
+    items: ["Case's and Legal Documents", 'Cyber fraud and Bank Account freeze']
   },
   {
     title: 'Digital Education',
-    items: ['Basic computer & CCC', 'Web & App designing', 'Tally & Digital Marketing', 'ADCA & O’LEVEL']
+    items: ['Basic computer, CCC, ADCA & O’LEVEL', 'Web & App designing', 'Tally & Digital Marketing']
   }
 ]
 

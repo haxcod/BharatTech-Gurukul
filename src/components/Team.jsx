@@ -2,8 +2,9 @@ import { motion } from 'framer-motion'
 import { FaLinkedin, FaTwitter, FaGithub, FaEnvelope } from 'react-icons/fa'
 import vinayImg from '../assets/team/vinay.avif'
 import saniyaImg from '../assets/team/saniya.avif'
-import anmolImg from '../assets/team/anmol.avif'
+import anmolImg from '../assets/team/anmol.jpeg'
 import ashishImg from '../assets/team/ashish.jpg'
+import sachinImg from '../assets/team/sachin.avif'
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -24,17 +25,24 @@ const team = [
     social: { linkedin: '#', twitter: '#', email: '#' }
   },
   {
-    name: 'Anmol kashyap',
+    name: 'Er. Anmol kashyap',
     role: 'Network & Electronic Engineer',
     image: anmolImg,
     skills: ['Network Architecture', 'Electronics', 'Tech Support'],
     social: { linkedin: '#', github: '#', email: '#' }
   },
   {
-    name: 'Ashish Rathaur',
+    name: 'Er. Ashish Rathaur',
     role: 'Lead Software Developer',
     image: ashishImg,
     skills: ['Full Stack Dev', 'Mobile Apps', 'Code Architecture'],
+    social: { linkedin: '#', github: '#', email: '#' }
+  },
+  {
+    name: 'Er. Sachin Maurya',
+    role: 'Civil engineer',
+    image: sachinImg,
+    skills: ['Civil engineer', 'Real Estate', 'Architecture engineer'],
     social: { linkedin: '#', github: '#', email: '#' }
   }
 ]
