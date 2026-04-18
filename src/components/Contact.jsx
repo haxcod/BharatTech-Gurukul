@@ -38,11 +38,19 @@ export default function Contact() {
       href: 'https://wa.me/919140254090',
     },
     {
+      icon: <FaEnvelope size={22} />,
+      title: 'Email',
+      value: 'vinay@bharattechgurukul.tech',
+      sub: 'Online Support',
+      color: 'from-orange-500 to-orange-700',
+      href: 'mailto:vinay@bharattechgurukul.tech',
+    },
+    {
       icon: <FaMapMarkerAlt size={22} />,
       title: 'Location',
       value: 'Lucknow, India',
       sub: 'Uttar Pradesh, IN',
-      color: 'from-orange-500 to-orange-700',
+      color: 'from-blue-500 to-blue-700',
       href: 'https://maps.google.com/?q=Lucknow,India',
     },
   ]

@@ -15,7 +15,7 @@ const team = [
     role: 'Founder & Director',
     image: vinayImg,
     skills: ['Security Systems', 'Digital Solutions', 'Legal advisor'],
-    social: { linkedin: '#', twitter: '#', email: 'mailto:9140254090' }
+    social: { linkedin: 'https://www.linkedin.com/in/vinay-kumar-abb2ab213', twitter: 'https://x.com/bharattech_g', email: 'mailto:contact@bharattechgurukul.com' }
   },
   {
     name: 'Saniya Shah',

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
+import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa'
 import { MdSecurity, MdEmail } from 'react-icons/md'
 import logo from '../assets/logo.png'
 
@@ -33,9 +33,11 @@ const quickLinks = [
 ]
 
 const socialLinks = [
-  { icon: <FaFacebook />, href: '#', color: '#1877f2' },
-  { icon: <FaInstagram />, href: '#', color: '#e1306c' },
-  { icon: <FaYoutube />, href: '#', color: '#ff0000' },
+  { icon: <FaFacebook />, href: 'https://www.facebook.com/share/1DnYfeFzgp/', color: '#1877f2' },
+  { icon: <FaInstagram />, href: 'https://www.instagram.com/bharattechgurukul?igsh=bDZxOGxnYXRoc3Fv', color: '#e1306c' },
+  { icon: <FaYoutube />, href: 'https://youtube.com/@bharattech.gurukul?si=mqlognGYNb2Sj7Nr', color: '#ff0000' },
+  { icon: <FaLinkedin />, href: 'https://www.linkedin.com/in/vinay-kumar-abb2ab213', color: '#0077b5' },
+  { icon: <FaTwitter />, href: 'https://x.com/bharattech_g', color: '#1da1f2' },
   { icon: <FaWhatsapp />, href: 'https://wa.me/919140254090', color: '#25d366' },
 ]
 
@@ -148,9 +150,19 @@ export default function Footer() {
                 </div>
               </a>
 
-              <div className="flex items-start gap-3">
+              <a href="mailto:contact@bharattechgurukul.com" className="flex items-start gap-3 group">
                 <div className="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <FaMapMarkerAlt className="text-orange-400 text-sm" />
+                  <MdEmail className="text-orange-400 text-sm" />
+                </div>
+                <div>
+                  <div className="text-white/40 text-xs mb-0.5">Email</div>
+                  <div className="text-white/80 group-hover:text-white text-sm font-medium transition-colors">contact@bharattechgurukul.com</div>
+                </div>
+              </a>
+
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <FaMapMarkerAlt className="text-blue-400 text-sm" />
                 </div>
                 <div>
                   <div className="text-white/40 text-xs mb-0.5">Location</div>
