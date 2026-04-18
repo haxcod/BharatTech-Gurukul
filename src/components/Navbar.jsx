@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaBars, FaTimes, FaPhone } from 'react-icons/fa'
-import { MdSecurity } from 'react-icons/md'
+import logo from '../assets/logo.png'
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -48,13 +48,13 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-3 cursor-pointer" onClick={(e) => handleNavClick(e, '#home')}>
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-lg">
-            <MdSecurity className="text-white text-xl" />
+        <div className="flex items-center gap-3 cursor-pointer group" onClick={(e) => handleNavClick(e, '#home')}>
+          <div className="relative w-12 h-12 flex items-center justify-center">
+            <img src={logo} alt="BharatTech Gurukul" className="relative h-full w-full object-cover transition-transform duration-500 scale-150" />
           </div>
-          <div>
-            <div className="font-bold text-white text-base leading-tight">BharatTech</div>
-            <div className="text-orange-400 text-xs font-semibold leading-tight tracking-wider">GURUKUL</div>
+          <div className="hidden xsm:block">
+            <div className="font-bold text-white text-base leading-tight tracking-tight">BharatTech</div>
+            <div className="text-orange-400 text-[10px] font-black leading-tight tracking-[0.2em] uppercase">Gurukul</div>
           </div>
         </div>
 

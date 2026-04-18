@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FaPhone, FaWhatsapp, FaMapMarkerAlt, FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa'
 import { MdSecurity, MdEmail } from 'react-icons/md'
+import logo from '../assets/logo.png'
 
 const serviceGroups = [
   {
@@ -54,13 +55,13 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-orange-500 to-orange-700 flex items-center justify-center shadow-lg">
-                <MdSecurity className="text-white text-xl" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center border border-white/20 shadow-2xl transition-all hover:scale-110 hover:bg-white/20">
+                <img src={logo} alt="BharatTech Gurukul" className="w-full h-full object-contain scale-150" />
               </div>
               <div>
-                <div className="font-bold text-white leading-tight">BharatTech</div>
-                <div className="text-orange-400 text-xs font-semibold tracking-wider">GURUKUL</div>
+                <div className="font-black text-white text-lg leading-tight tracking-tight uppercase">BharatTech</div>
+                <div className="text-orange-400 text-[10px] font-black tracking-[0.2em] uppercase">Gurukul</div>
               </div>
             </div>
             <p className="text-white/45 text-sm leading-relaxed mb-5">
