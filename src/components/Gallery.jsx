@@ -2,79 +2,71 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { FaExpand } from 'react-icons/fa'
 import { MdSecurity } from 'react-icons/md'
+import img1 from '../assets/gallery/image-1.jpeg'
+import img2 from '../assets/gallery/image-2.jpeg'
+import img3 from '../assets/gallery/image-3.jpeg'
+import img4 from '../assets/gallery/image-4.jpeg'
+import img5 from '../assets/gallery/image-5.jpeg'
+import img6 from '../assets/gallery/image-6.jpeg'
+import img7 from '../assets/gallery/image-7.jpeg'
+import img8 from '../assets/gallery/image-8.jpeg'
 
 // Gallery items using gradient placeholder cards with icons and labels
 const galleryItems = [
   {
-    title: 'CCTV Installation',
-    category: 'Security',
-    bg: 'from-blue-900 via-blue-800 to-cyan-900',
-    accent: '#3b82f6',
-    emoji: '📹',
-    span: 'col-span-1 row-span-1',
-  },
-  {
-    title: 'Modern Website Design',
-    category: 'Development',
-    bg: 'from-orange-900 via-red-900 to-orange-800',
+    title: 'Property Dealer',
+    category: 'Property',
+    image: img1,
     accent: '#f97316',
-    emoji: '💻',
-    span: 'col-span-1 row-span-2',
   },
   {
-    title: 'DVR Security System',
-    category: 'Security',
-    bg: 'from-slate-900 via-blue-950 to-slate-800',
-    accent: '#6366f1',
-    emoji: '🔒',
-    span: 'col-span-1 row-span-1',
+    title: 'Villa Construction - Ahmamau Project',
+    category: 'Construction',
+    image: img2,
+    accent: '#3b82f6',
   },
   {
-    title: 'Premium Plots',
+    title: 'Real Estate Dealer',
     category: 'Property',
-    bg: 'from-green-900 via-emerald-900 to-teal-900',
-    accent: '#22c55e',
-    emoji: '🏡',
-    span: 'col-span-1 row-span-1',
+    image: img3,
+    accent: '#f97316',
   },
   {
-    title: 'Legal Documents',
-    category: 'Legal',
-    bg: 'from-purple-900 via-violet-900 to-purple-800',
-    accent: '#a855f7',
-    emoji: '⚖️',
-    span: 'col-span-1 row-span-1',
+    title: 'Home Construction - Vrindavan Yojna',
+    category: 'Construction',
+    image: img4,
+    accent: '#3b82f6',
   },
   {
-    title: 'Android App UI',
-    category: 'Development',
-    bg: 'from-rose-900 via-pink-900 to-red-900',
-    accent: '#ec4899',
-    emoji: '📱',
-    span: 'col-span-1 row-span-1',
+    title: 'Apartment Construction - Ahmamau',
+    category: 'Construction',
+    image: img5,
+    accent: '#3b82f6',
   },
   {
-    title: 'IP Camera Network',
-    category: 'Security',
-    bg: 'from-sky-900 via-blue-900 to-indigo-900',
-    accent: '#0ea5e9',
-    emoji: '🔍',
-    span: 'col-span-1 row-span-1',
-  },
-  {
-    title: 'Property Consulting',
+    title: 'Residential Project - Vrindavan Yojna',
     category: 'Property',
-    bg: 'from-amber-900 via-yellow-900 to-orange-900',
-    accent: '#f59e0b',
-    emoji: '🏢',
-    span: 'col-span-1 row-span-1',
+    image: img6,
+    accent: '#f97316',
+  },
+  {
+    title: 'Villa Site - Ahmamau Project',
+    category: 'Construction',
+    image: img7,
+    accent: '#3b82f6',
+  },
+  {
+    title: 'Plots & Development - Vrindavan Yojna',
+    category: 'Property',
+    image: img8,
+    accent: '#f97316',
   },
 ]
 
 const categoryColors = {
-  Security: 'bg-blue-500/20 text-blue-300',
-  Development: 'bg-orange-500/20 text-orange-300',
-  Property: 'bg-green-500/20 text-green-300',
+  Property: 'bg-orange-500/20 text-orange-300',
+  Construction: 'bg-blue-500/20 text-blue-300',
+  Development: 'bg-green-500/20 text-green-300',
   Legal: 'bg-purple-500/20 text-purple-300',
 }
 
@@ -89,57 +81,48 @@ function GalleryCard({ item, index }) {
       animate={inView ? { opacity: 1, scale: 1 } : {}}
       transition={{ duration: 0.5, delay: index * 0.08 }}
       className="relative group overflow-hidden rounded-2xl cursor-pointer"
-      style={{ aspectRatio: '4/3' }}
+      style={{ aspectRatio: '1/1' }}
     >
-      {/* Background gradient */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${item.bg} transition-transform duration-500 group-hover:scale-110`} />
+      {/* Background Image */}
+      {item.image ? (
+        <img 
+          src={item.image} 
+          alt={item.title} 
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        />
+      ) : (
+        <div className={`absolute inset-0 bg-gradient-to-br ${item.bg}`} />
+      )}
 
       {/* Pattern overlay */}
       <div
-        className="absolute inset-0 opacity-10"
+        className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle at 30% 30%, ${item.accent}88 0%, transparent 60%)`,
+          backgroundImage: `radial-gradient(circle at 30% 30%, ${item.accent}44 0%, transparent 70%)`,
         }}
       />
-
-      {/* Grid texture */}
-      <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage: `linear-gradient(${item.accent}50 1px, transparent 1px), linear-gradient(90deg, ${item.accent}50 1px, transparent 1px)`,
-          backgroundSize: '30px 30px',
-        }}
-      />
-
-      {/* Main icon */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div
-          className="text-6xl opacity-30 group-hover:opacity-50 group-hover:scale-125 transition-all duration-500"
-          style={{ filter: 'drop-shadow(0 0 20px ' + item.accent + ')' }}
-        >
-          {item.emoji}
-        </div>
-      </div>
 
       {/* Hover overlay */}
-      <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-        <div className="text-center">
-          <FaExpand className="text-white text-2xl mx-auto mb-3" />
-          <p className="text-white font-semibold text-sm">View Project</p>
+      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+          <div className="w-12 h-12 rounded-full glass flex items-center justify-center text-white mx-auto mb-3 shadow-xl">
+            <FaExpand />
+          </div>
+          <p className="text-white font-bold text-xs tracking-wider uppercase">Enlarge</p>
         </div>
       </div>
 
       {/* Category badge */}
-      <div className="absolute top-3 left-3">
-        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${categoryColors[item.category]}`}
-          style={{ backdropFilter: 'blur(8px)', background: item.accent + '33' }}>
+      <div className="absolute top-4 left-4">
+        <span className={`px-3 py-1 rounded-lg text-[10px] font-black uppercase tracking-widest ${categoryColors[item.category]}`}
+          style={{ backdropFilter: 'blur(12px)', border: '1px solid rgba(255,255,255,0.1)' }}>
           {item.category}
         </span>
       </div>
 
       {/* Title at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-        <h3 className="text-white font-semibold text-sm">{item.title}</h3>
+      <div className="absolute bottom-0 left-0 right-0 p-5 bg-gradient-to-t from-black/90 via-black/40 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <h3 className="text-white font-bold text-sm leading-tight">{item.title}</h3>
       </div>
     </motion.div>
   )

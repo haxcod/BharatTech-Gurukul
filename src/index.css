@@ -262,3 +262,46 @@ body {
 .skip-to-content:focus {
   top: 0;
 }
+
+/* Slick carousel dot styling */
+.slick-dots {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 8px;
+}
+.slick-dots li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+/* Crucial: hide the default slick dot pseudo-elements */
+.slick-dots li button:before {
+  display: none !important;
+  content: '' !important;
+}
+.slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  min-height: 0 !important; /* Override the 44px mobile global rule */
+  border-radius: 5px;
+  background: rgba(255,255,255,0.25);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.slick-dots li.slick-active button {
+  background: #f97316;
+  border-color: #f97316;
+  width: 28px; /* Slightly longer for better contrast */
+  box-shadow: 0 0 15px rgba(249,115,22,0.4);
+}

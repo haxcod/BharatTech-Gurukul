@@ -2,6 +2,9 @@ import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { MdSecurity, MdVerified } from 'react-icons/md'
 import { FaCode, FaHome, FaBalanceScale, FaCamera, FaMobile, FaLaptopCode, FaBuilding, FaHandshake, FaFileAlt, FaGavel, FaIdCard, FaCog, FaGraduationCap } from 'react-icons/fa'
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const services = [
   {
@@ -157,10 +160,21 @@ export default function Services() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+        {/* Desktop grid */}
+        <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {services.map((s, i) => (
             <ServiceCard key={i} service={s} index={i} />
           ))}
+        </div>
+        {/* Mobile carousel */}
+        <div className="md:hidden pb-12">
+          <Slider {...{dots:true,infinite:true,speed:500,slidesToShow:1,slidesToScroll:1,arrows:false}}>
+            {services.map((s, i) => (
+              <div key={i} className="px-2">
+                <ServiceCard service={s} index={i} />
+              </div>
+            ))}
+          </Slider>
         </div>
       </div>
     </section>

@@ -167,6 +167,7 @@ export default function Contact() {
                   <option value="Android App">Android App Development</option>
                   <option value="Property Dealer">Property Dealer</option>
                   <option value="Legal Services">Legal Services</option>
+                  <option value="Digital Education">Digital Education</option>
                   <option value="Other">Other</option>
                 </select>
               </div>

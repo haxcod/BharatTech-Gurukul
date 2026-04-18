@@ -95,7 +95,8 @@ export default function Hero() {
         >
           All-in-one solution for <span className="text-orange-400 font-semibold">Digital</span>,{' '}
           <span className="text-blue-400 font-semibold">Security</span>,{' '}
-          <span className="text-green-400 font-semibold">Property</span> &{' '}
+          <span className="text-green-400 font-semibold">Property</span>,{' '}
+          <span className="text-pink-500 font-semibold">Education</span> &{' '}
           <span className="text-purple-400 font-semibold">Legal</span> Services
         </motion.p>
 
