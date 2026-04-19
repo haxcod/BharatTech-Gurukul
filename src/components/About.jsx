@@ -111,7 +111,13 @@ export default function About() {
           className="mt-16 glass-dark rounded-3xl p-8 flex flex-col sm:flex-row items-center gap-8"
         >
           <div className="w-24 h-24 rounded-2xl bg-gradient-to-br from-orange-500 to-blue-600 flex items-center justify-center text-white text-3xl font-black shadow-2xl flex-shrink-0 overflow-hidden">
-            <img src={vinayImg} alt={'vinay kumar'} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+            <img 
+              src={vinayImg} 
+              alt="Er. Vinay Kumar - Founder and Director of BharatTech Gurukul" 
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            />
           </div>
           <div className="flex-1 text-center sm:text-left">
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">

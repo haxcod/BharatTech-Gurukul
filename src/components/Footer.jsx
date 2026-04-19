@@ -59,7 +59,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center border border-white/20 shadow-2xl transition-all hover:scale-110 hover:bg-white/20">
-                <img src={logo} alt="BharatTech Gurukul" className="w-full h-full object-contain scale-150" />
+                <img src={logo} alt="BharatTech Gurukul Official Logo" loading="lazy" className="w-full h-full object-contain scale-150" />
               </div>
               <div>
                 <div className="font-black text-white text-lg leading-tight tracking-tight uppercase">BharatTech</div>
@@ -77,6 +77,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Follow us on ${s.href.includes('facebook') ? 'Facebook' : s.href.includes('instagram') ? 'Instagram' : s.href.includes('youtube') ? 'YouTube' : s.href.includes('linkedin') ? 'LinkedIn' : s.href.includes('wa.me') ? 'WhatsApp' : 'Twitter'}`}
                   className="w-9 h-9 rounded-lg glass flex items-center justify-center text-white/60 hover:text-white transition-all hover:scale-110"
                   style={{ '--hover-color': s.color }}
                 >
@@ -150,13 +151,13 @@ export default function Footer() {
                 </div>
               </a>
 
-              <a href="mailto:contact@bharattechgurukul.com" className="flex items-start gap-3 group">
+              <a href="mailto:contact@bharattechgurukul.tech" className="flex items-start gap-3 group">
                 <div className="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MdEmail className="text-orange-400 text-sm" />
                 </div>
                 <div>
                   <div className="text-white/40 text-xs mb-0.5">Email</div>
-                  <div className="text-white/80 group-hover:text-white text-sm font-medium transition-colors">contact@bharattechgurukul.com</div>
+                  <div className="text-white/80 group-hover:text-white text-sm font-medium transition-colors">contact@bharattechgurukul.tech</div>
                 </div>
               </a>
 

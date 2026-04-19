@@ -1,0 +1,7 @@
+# robots.txt for https://bharattechgurukul.tech/
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://bharattechgurukul.tech/sitemap.xml

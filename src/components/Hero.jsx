@@ -40,6 +40,7 @@ export default function Hero() {
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
+          aria-hidden="true"
           className="absolute hidden md:flex w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} items-center justify-center text-white shadow-2xl"
           style={item.style}
           initial={{ opacity: 0, scale: 0 }}
